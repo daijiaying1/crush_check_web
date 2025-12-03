@@ -1,5 +1,5 @@
 {
-    "name" : "crush_check",
+    "name" : "CrushCheck",
     "appid" : "__UNI__B89597F",
     "description" : "",
     "versionName" : "1.0.0",
@@ -73,6 +73,6 @@
         "router" : {
             "base" : "/h5"
         },
-        "title" : "crush_check"
+        "title" : "CrushCheck"
     }
 }
