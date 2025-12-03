@@ -59,7 +59,17 @@
 			}
 		},
 		onLoad() {
-
+			// 检测设备平台并自动生成对应的二维码
+			const platform = uni.getSystemInfoSync().platform;
+			console.log(platform,'platform')
+			
+			if (platform === 'ios' || platform === 'mac') {
+				// iOS 设备或 Mac 电脑 - 自动生成 iOS 二维码
+				this.generateQRCode('ios');
+			} else if (platform === 'android' || platform === 'windows') {
+				// Android 设备或 Windows 电脑 - 自动生成 APK 二维码
+				this.generateQRCode('apk');
+			}
 		},
 		methods: {
 			generateQRCode(type) {
